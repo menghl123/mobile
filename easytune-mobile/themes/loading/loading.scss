@@ -1,0 +1,31 @@
+@import "../ionic/ionic.globals";
+
+// Loading Indicator
+// --------------------------------------------------
+.loading {
+  background: url('/assets/loading.gif') no-repeat;
+  width: 30px;
+  height: 30px;
+}
+et-loading {
+  @include position(0, 0, 0, 0);
+
+  position: absolute;
+  z-index: $z-index-overlay;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  contain: strict;
+}
+
+.loading-wrapper {
+  z-index: $z-index-overlay-wrapper;
+  display: flex;
+
+  align-items: center;
+
+  opacity: 0;
+}

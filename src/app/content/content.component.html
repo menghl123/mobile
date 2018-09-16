@@ -1,0 +1,25 @@
+<et-header>
+  <et-toolbar>
+    <et-title>My Toolbar Title</et-title>
+  </et-toolbar>
+</et-header>
+
+<et-content (scrollEnd)="scrollEnd($event)" (scrollStart)="scrollStart($event)" (scrolling)="scrolling($event)">
+  <et-card>
+    <et-card-header>
+      我是头部
+    </et-card-header>
+    <button (click)="doActionSheet()" et-button>Button</button>
+  </et-card>
+  <button (click)="doAlert()" et-button color="dark" round>doAlert</button>
+  <button (click)="doAlertPrompt()" et-button color="dark" round>doAlertPrompt</button>
+  <button (click)="doAlertRadio()" et-button color="dark" round>doAlertRadio</button>
+  <button et-button full>Full Button</button>
+  <button et-button icon-start>
+    Left Icon
+  </button>
+  <button (click)="toTop()">回到顶部</button>
+</et-content>
+<et-footer>
+  <h3>我是脚部</h3>
+</et-footer>

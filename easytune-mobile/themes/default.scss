@@ -1,0 +1,21 @@
+$font-path: "~ionicons/dist/fonts/";
+$app-direction: ltr;
+@import "~ionicons/dist/scss/ionicons-icons";
+
+@import "./ionic/ionic.globals";
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+@import "./ionic/ionic.theme.default";
+@import "./ionic/ionic.theme.default.md";
+@import "./ionic/ionic.theme.default.ios";
+
+@import "./ionic/ionic.components";
+@import "~font-awesome/css/font-awesome.min.css";
+

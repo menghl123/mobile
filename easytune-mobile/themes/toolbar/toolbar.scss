@@ -1,0 +1,104 @@
+@import "../ionic/ionic.globals";
+
+// Toolbar
+// --------------------------------------------------
+
+et-toolbar {
+  position: relative;
+  z-index: $z-index-toolbar;
+}
+
+.toolbar {
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  contain: content;
+}
+
+.toolbar-background {
+  @include position(0, null, null, 0);
+
+  position: absolute;
+  z-index: $z-index-toolbar-background;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  transform: translateZ(0);
+
+  pointer-events: none;
+
+  contain: strict;
+}
+
+et-title {
+  display: flex;
+
+  flex: 1;
+  align-items: center;
+
+  transform: translateZ(0);
+}
+
+.toolbar-title {
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+et-buttons {
+  @include margin(0, .2rem);
+
+  display: block;
+
+  transform: translateZ(0);
+
+  pointer-events: none;
+}
+
+et-buttons button,
+et-buttons a,
+et-buttons input,
+et-buttons textarea,
+et-buttons div {
+  pointer-events: auto;
+}
+
+
+// Transparent Toolbar
+// --------------------------------------------------
+
+.toolbar[transparent] .toolbar-background {
+  border-color: transparent;
+  background: transparent;
+}
+
+
+// TODO this is a temp hack to fix segment overlapping et-nav-item
+et-buttons,
+.bar-button-menutoggle {
+  z-index: 99;
+
+  transform: translateZ(0);
+}
+
+
+// Navbar
+// --------------------------------------------------
+
+et-navbar.toolbar {
+  display: flex;
+
+  transform: translateZ(0);
+}

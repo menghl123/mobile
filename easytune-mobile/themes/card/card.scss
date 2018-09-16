@@ -1,0 +1,28 @@
+@import "../ionic/ionic.globals";
+
+// Card
+// --------------------------------------------------
+
+
+et-card {
+  display: block;
+  overflow: hidden;
+}
+
+et-card img {
+  display: block;
+
+  width: 100%;
+}
+
+et-card-header {
+  display: block;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+et-card-content {
+  display: block;
+}
